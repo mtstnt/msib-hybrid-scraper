@@ -2,9 +2,9 @@
 
 Script sederhana untuk scraping data lowongan magang MSIB yang available untuk hybrid.
 
-URL untuk ambil semua data: (https://api.kampusmerdeka.kemdikbud.go.id/magang/browse/position?offset=0&limit=20)[https://api.kampusmerdeka.kemdikbud.go.id/magang/browse/position]
+URL untuk ambil semua data: [https://api.kampusmerdeka.kemdikbud.go.id/magang/browse/position?offset=0&limit=20](https://api.kampusmerdeka.kemdikbud.go.id/magang/browse/position)
 
-URL untuk ambil data by ID: (https://api.kampusmerdeka.kemdikbud.go.id/magang/browse/position/id)[https://api.kampusmerdeka.kemdikbud.go.id/magang/browse/position/{id}]
+URL untuk ambil data by ID: [https://api.kampusmerdeka.kemdikbud.go.id/magang/browse/position/id](https://api.kampusmerdeka.kemdikbud.go.id/magang/browse/position/{id})
 
 Script ini akan mengambil data lowongan yang mempunyai `activity_type` berisi `BLENDED`.
 
