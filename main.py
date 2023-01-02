@@ -3,10 +3,11 @@ import sys
 import requests as req
 
 URL = "https://api.kampusmerdeka.kemdikbud.go.id/magang/browse/position"
+VIEW_URL = "https://kampusmerdeka.kemdikbud.go.id/program/magang/browse"
 FETCH_COUNT = 100
 
-def get_url_for_id(id: str) -> str:
-  return f"{URL}/{id}"
+def get_url_for_id(mitra_id: str, id: str) -> str:
+  return f"{VIEW_URL}/{mitra_id}/{id}"
 
 def get_url_fetch(offset: int, limit: int) -> str:
   return f"{URL}?offset={offset}&limit={limit}"
@@ -36,7 +37,7 @@ def main(argv: list[str]) -> int:
         print(item_counter, "\t", item["name"], file=fp)
         print("\t\t", item["mitra_name"], file=fp)
         print("\t\t", item["activity_name"], file=fp)
-        print("\t\t", get_url_for_id(item["id"]), file=fp)
+        print("\t\t", get_url_for_id(item["mitra_id"], item["id"]), file=fp)
         item_counter += 1
   return 0
 
